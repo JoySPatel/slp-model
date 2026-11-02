@@ -1,0 +1,13 @@
+{
+  "revision": "67630930030046543194dc7c701b87b2cdc7680f",
+  "files": {
+    "train": {
+      "path": "SEP28k-E/train-00000-of-00003.parquet",
+      "sha256": "07b1d96b5868d81ede3a6fd5ced2b72f101acb40ab0b9fee37b013e5d54e65ed"
+    },
+    "dev": {
+      "path": "SEP28k-E/dev-00000-of-00001.parquet",
+      "sha256": "01d3a16e648565faa22c8c09c11ab1872a07c0a490a4795906e51268f44488a9"
+    }
+  }
+}

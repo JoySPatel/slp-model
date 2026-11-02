@@ -1,0 +1,26 @@
+__pycache__/
+.venv/
+.DS_Store
+models/*.pt
+models/*.safetensors
+*.wav
+*.webm
+*.m4a
+training/data/
+training/runs/*/*.pt
+training/runs/*/manifest.json
+training/runs/*/development-predictions.json
+personal_models/
+
+# Local recordings, exports, and secrets
+*.mp3
+*.mp4
+*.ogg
+*.flac
+*.aac
+*.aiff
+*.caf
+.env
+.env.*
+*.zip
+*.png

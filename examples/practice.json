@@ -1,0 +1,8 @@
+{
+  "segments": [
+    {"start": 0.0, "end": 4.5, "text": "Um, today I want to explain my project."},
+    {"start": 6.0, "end": 10.0, "text": "It it helps people practice presentations."},
+    {"start": 10.5, "end": 16.0, "text": "You know, getting useful feedback can be difficult."},
+    {"start": 18.2, "end": 24.0, "text": "I mean, the goal is to notice patterns and improve one thing at a time."}
+  ]
+}

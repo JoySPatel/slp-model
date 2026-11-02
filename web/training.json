@@ -1,0 +1,364 @@
+{
+  "run_id": "pilot-001",
+  "status": "complete",
+  "stage": "Pilot training complete",
+  "started_at": "2026-11-02T02:11:17.383866+00:00",
+  "dataset": "SEP-28k-E \u00b7 psusac/sep28k mirror",
+  "dataset_url": "https://huggingface.co/datasets/psusac/sep28k",
+  "dataset_revision": "67630930030046543194dc7c701b87b2cdc7680f",
+  "license": "CC BY-NC 4.0 (upstream SEP-28k-E)",
+  "method": "Fine-tune classifier head; freeze WavLM, LoRA, and attentive pooling.",
+  "active_model": "Original research checkpoint (unchanged)",
+  "limitations": [
+    "The starting model was already trained on SEP-28k. Prior exposure to these clips is unknown; this is not an unseen-data benchmark.",
+    "A small, class-balanced subset with ambiguous/multi-event clips excluded. Results do not represent natural event frequencies.",
+    "Development data selects the best epoch. No independent final test or clinical validation has been performed.",
+    "Speaker IDs are dataset metadata, not independently verified. No personal recordings are used."
+  ],
+  "config": {
+    "seed": 42,
+    "epochs": 25,
+    "learning_rate": 0.0001,
+    "batch_size": 32,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "training_cap_per_class": 80,
+    "development_cap_per_class": 30
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.9202660250663758,
+      "development_macro_f1": 0.6885329359905631,
+      "development_accuracy": 0.6866666666666666
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.8562289810180664,
+      "development_macro_f1": 0.6640988363145951,
+      "development_accuracy": 0.6666666666666666
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.8405378127098083,
+      "development_macro_f1": 0.6712001854911167,
+      "development_accuracy": 0.6733333333333333
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.803698091506958,
+      "development_macro_f1": 0.6936299184686281,
+      "development_accuracy": 0.6933333333333334
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.7973599672317505,
+      "development_macro_f1": 0.665163528717204,
+      "development_accuracy": 0.6666666666666666
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.7704173970222473,
+      "development_macro_f1": 0.6794851718496466,
+      "development_accuracy": 0.68
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.7631243944168091,
+      "development_macro_f1": 0.6858404426589629,
+      "development_accuracy": 0.6866666666666666
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.7457973325252533,
+      "development_macro_f1": 0.6802906302955389,
+      "development_accuracy": 0.68
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.7397825360298157,
+      "development_macro_f1": 0.6674097765142541,
+      "development_accuracy": 0.6666666666666666
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.7363130784034729,
+      "development_macro_f1": 0.6607553473181949,
+      "development_accuracy": 0.66
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.726456503868103,
+      "development_macro_f1": 0.6684115319389485,
+      "development_accuracy": 0.6666666666666666
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.7030470824241638,
+      "development_macro_f1": 0.6363371397381673,
+      "development_accuracy": 0.64
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.6885464417934418,
+      "development_macro_f1": 0.6467404596491193,
+      "development_accuracy": 0.6466666666666666
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.6967117404937744,
+      "development_macro_f1": 0.6551619936847455,
+      "development_accuracy": 0.6533333333333333
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.6719587564468383,
+      "development_macro_f1": 0.6457707975907476,
+      "development_accuracy": 0.6466666666666666
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.6463979923725128,
+      "development_macro_f1": 0.6692331473503798,
+      "development_accuracy": 0.6666666666666666
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.6298059225082397,
+      "development_macro_f1": 0.6571943456690923,
+      "development_accuracy": 0.66
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.6162913000583649,
+      "development_macro_f1": 0.6530274643389398,
+      "development_accuracy": 0.6533333333333333
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.6170143413543702,
+      "development_macro_f1": 0.6479011189662437,
+      "development_accuracy": 0.6466666666666666
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.6072817647457123,
+      "development_macro_f1": 0.660320311409021,
+      "development_accuracy": 0.66
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.5880887269973755,
+      "development_macro_f1": 0.6589501155129631,
+      "development_accuracy": 0.66
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.5795296692848205,
+      "development_macro_f1": 0.6594181659810137,
+      "development_accuracy": 0.66
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.5477803111076355,
+      "development_macro_f1": 0.6467636484485937,
+      "development_accuracy": 0.6466666666666666
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.5609300005435943,
+      "development_macro_f1": 0.6570893500899586,
+      "development_accuracy": 0.66
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.5438677954673767,
+      "development_macro_f1": 0.6689788761112471,
+      "development_accuracy": 0.6666666666666666
+    }
+  ],
+  "updated_at": "2026-11-02T02:11:59.647655+00:00",
+  "train": {
+    "available_rows": 4216,
+    "selected": 400,
+    "class_counts": {
+      "Prolongation": 80,
+      "Repetition": 80,
+      "Block": 80,
+      "Interjection": 80,
+      "Fluent": 80
+    },
+    "skipped_or_not_selected": 3816
+  },
+  "development": {
+    "available_rows": 4888,
+    "selected": 150,
+    "class_counts": {
+      "Prolongation": 30,
+      "Repetition": 30,
+      "Block": 30,
+      "Interjection": 30,
+      "Fluent": 30
+    },
+    "skipped_or_not_selected": 4738
+  },
+  "speaker_overlap": 0,
+  "audio_hash_overlap": 0,
+  "data_sha256": {
+    "train": "07b1d96b5868d81ede3a6fd5ced2b72f101acb40ab0b9fee37b013e5d54e65ed",
+    "dev": "01d3a16e648565faa22c8c09c11ab1872a07c0a490a4795906e51268f44488a9"
+  },
+  "base_model_sha256": "752de4ef57d7afcbdd40ef6a1770923a9dcedb7557f008134697508b4f151a94",
+  "code_sha256": "20f1786568c8fb545bf5dc6b51254663a2b061983eefe1560ffea17f9fa7e274",
+  "processed_clips": 550,
+  "baseline": {
+    "accuracy": 0.6666666666666666,
+    "macro_f1": 0.6681414367581672,
+    "per_class": {
+      "Prolongation": {
+        "precision": 0.75,
+        "recall": 0.8,
+        "f1": 0.7741935483870968,
+        "support": 30
+      },
+      "Repetition": {
+        "precision": 0.6896551724137931,
+        "recall": 0.6666666666666666,
+        "f1": 0.6779661016949152,
+        "support": 30
+      },
+      "Block": {
+        "precision": 0.5151515151515151,
+        "recall": 0.5666666666666667,
+        "f1": 0.5396825396825397,
+        "support": 30
+      },
+      "Interjection": {
+        "precision": 0.7916666666666666,
+        "recall": 0.6333333333333333,
+        "f1": 0.7037037037037037,
+        "support": 30
+      },
+      "Fluent": {
+        "precision": 0.625,
+        "recall": 0.6666666666666666,
+        "f1": 0.6451612903225806,
+        "support": 30
+      }
+    },
+    "confusion_matrix": [
+      [
+        24,
+        3,
+        1,
+        0,
+        2
+      ],
+      [
+        4,
+        20,
+        6,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        17,
+        1,
+        9
+      ],
+      [
+        3,
+        4,
+        3,
+        19,
+        1
+      ],
+      [
+        0,
+        0,
+        6,
+        4,
+        20
+      ]
+    ]
+  },
+  "candidate": {
+    "accuracy": 0.6933333333333334,
+    "macro_f1": 0.6936299184686281,
+    "per_class": {
+      "Prolongation": {
+        "precision": 0.75,
+        "recall": 0.8,
+        "f1": 0.7741935483870968,
+        "support": 30
+      },
+      "Repetition": {
+        "precision": 0.7307692307692307,
+        "recall": 0.6333333333333333,
+        "f1": 0.6785714285714286,
+        "support": 30
+      },
+      "Block": {
+        "precision": 0.525,
+        "recall": 0.7,
+        "f1": 0.6,
+        "support": 30
+      },
+      "Interjection": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8,
+        "support": 30
+      },
+      "Fluent": {
+        "precision": 0.7272727272727273,
+        "recall": 0.5333333333333333,
+        "f1": 0.6153846153846154,
+        "support": 30
+      }
+    },
+    "confusion_matrix": [
+      [
+        24,
+        2,
+        2,
+        0,
+        2
+      ],
+      [
+        4,
+        19,
+        7,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        21,
+        1,
+        4
+      ],
+      [
+        2,
+        2,
+        2,
+        24,
+        0
+      ],
+      [
+        0,
+        1,
+        8,
+        5,
+        16
+      ]
+    ]
+  },
+  "best_epoch": 4,
+  "candidate_sha256": "b701750f5997dd5bd4a2f3cfc18554d10576b792d90d43493bad9cd2a2feec5d",
+  "completed_at": "2026-11-02T02:11:59.647648+00:00",
+  "decision": "Candidate saved for further evaluation; original model remains active. Development results alone do not justify a deployment claim."
+}
