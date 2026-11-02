@@ -71,14 +71,6 @@ Tests check input handling, model loading and input-dependent outputs, silence h
 - `MODEL_CARD.md`: source attribution and limitations.
 - `speech_feedback.py`: earlier standalone transcript-analysis CLI, retained as a separate utility. It is not used for audio stuttering detection.
 
-## Portfolio description
-
-**Room to Speak — Private Speech Practice Prototype**
-
-Inspired by my experience with stuttering, developed a local speech-practice app with private recording, playback, personal reflection, and user-correctable feedback. Integrated an open research model to suggest possible repetitions, prolongations, and blocks, with on-device processing and explicit limitations around detection accuracy.
-
-Describe the model as integrated rather than trained by you, and acknowledge AI assistance accurately when discussing your development process.
-
 ## Model development
 
 The app now displays a real training experiment log. A local pilot fine-tuned the classifier head on 400 public SEP-28k-E clips and selected a candidate using 150 development clips. The candidate is saved separately; the original model is still active. No personal recordings are used. See [training/README.md](training/README.md) for reproduction commands and evaluation limits. The base model was integrated from an existing research project; only this additional classifier-head training was performed here.
